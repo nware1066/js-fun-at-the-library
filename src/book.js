@@ -21,11 +21,15 @@ function writeBook(title, mainCharacter, genre) {
   return {title, mainCharacter, genre, pageCount: calculatePageCount(title)}
 }
 
+function editBook(book) {
+  book.pageCount = book.pageCount * .75;
+}
+
 module.exports = {
   createTitle: createTitle,
   buildMainCharacter: buildMainCharacter,
   saveReview: saveReview,
   calculatePageCount: calculatePageCount,
   writeBook: writeBook,
-  // editBook: editBook
+  editBook: editBook
 }
