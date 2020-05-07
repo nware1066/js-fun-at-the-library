@@ -17,12 +17,15 @@ function calculatePageCount(title) {
   return pageCount;
 }
 
+function writeBook(title, mainCharacter, genre) {
+  return {title, mainCharacter, genre, pageCount: calculatePageCount(title)}
+}
 
 module.exports = {
   createTitle: createTitle,
   buildMainCharacter: buildMainCharacter,
   saveReview: saveReview,
   calculatePageCount: calculatePageCount,
-  // writeBook: writeBook,
+  writeBook: writeBook,
   // editBook: editBook
 }
