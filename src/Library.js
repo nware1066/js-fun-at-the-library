@@ -10,6 +10,9 @@ function createLibrary(name) {
   };
 }
 
+function addBook(library, book) {
+  library.shelves[book.genre].push(book);
+}
 // takes in a string as a parameter
 // returns a string as a value of name key in a library object
 
@@ -17,6 +20,6 @@ function createLibrary(name) {
 
 module.exports = {
   createLibrary: createLibrary,
-  // addBook: addBook,
+  addBook: addBook,
   // checkoutBook: checkoutBook
 };

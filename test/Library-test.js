@@ -1,5 +1,6 @@
 var assert = require("chai").assert;
 var createLibrary = require("../src/library.js").createLibrary;
+var addBook = require("../src/library.js").addBook;
 var checkoutBook = require("../src/library.js").checkoutBook;
 
 describe("library.js", function() {
@@ -36,7 +37,7 @@ describe("library.js", function() {
   });
 
   describe("addBook", function() {
-    it.skip("should add book to the fantasy shelf", function() {
+    it("should add book to the fantasy shelf", function() {
       var denverLibrary = createLibrary("Denver Public Library");
       var dracula = {
         title: "Dracula",
@@ -50,7 +51,7 @@ describe("library.js", function() {
       assert.equal(denverLibrary.shelves.fantasy[0], dracula);
     });
 
-    it.skip('should add books to the correct shelves automatically', function() {
+    it('should add books to the correct shelves automatically', function() {
       var denverLibrary = createLibrary("Denver Public Library");
       var dracula = {
         title: "Dracula",
