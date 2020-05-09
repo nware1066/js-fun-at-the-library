@@ -20,24 +20,12 @@ function unshelfBook(title, shelf) {
 // assign the string to a variable
 
 function listTitles(shelf) {
-  var titleList = "";
-  for (var i = 0; i < shelf.length; i++) {
-    if (i === 0) {
-      titleList += shelf[i].title;
-    } else {
-      titleList += ", " + shelf[i].title;
-    }
-  }
-  return titleList;
+  return shelf.map(book => book.title).join(", ");
 }
 
+
 function searchShelf(shelf, title) {
-  for (var i = 0; i < shelf.length; i++) {
-    if (shelf[i].title === title) {
-      return true;
-    }
-  }
-  return false;
+  return shelf.some(book => book.title === title);
 }
 
 module.exports = {
